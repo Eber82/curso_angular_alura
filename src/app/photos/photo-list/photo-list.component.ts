@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Photo } from '../photo/photo';
 import { PhotoService } from '../photo/photo.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { PhotoService } from '../photo/photo.service';
 })
 export class PhotoListComponent implements OnInit {
   
-  photos : Object[] = [];
+  photos : Photo[] = [];
+  filter : string = ''
 
 
   constructor(private service : PhotoService){}
