@@ -1,0 +1,29 @@
+<h1 *ngFor="let produto of produtos">
+
+  <p>Nome do Produto {{ produto.nome }}</p>  
+  <p>preço {{ produto.preco }}</p>  
+
+</h1>
+
+
+<p-dataView [value]="produtos">
+  <ng-template let-produto pTemplate="listItem">
+      <div>
+          {{produto.nome}} - {{produto.preco}}
+
+      </div>
+  </ng-template>
+  <ng-template let-produto pTemplate="gridItem">
+      <div class="ui-g-12 ui-md-3">
+          -------{{produto.preco}}
+      </div>
+  </ng-template>
+</p-dataView>
+
+<p-dataView [value]="produtos">
+  <ng-template let-produto pTemplate="gridItem">
+      <div>
+          ------- {{produto.preco}}
+      </div>
+  </ng-template>
+</p-dataView>
