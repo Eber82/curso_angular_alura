@@ -5,9 +5,14 @@ import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
+import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 
 const routes: Routes = [
-    { path: 'user/flavio', component: PhotoListComponent },
+    { path: 'user/:userName', 
+      component: PhotoListComponent,
+      resolve : {
+        photos : PhotoListResolver}
+    },
     { path: 'p/add', component: PhotoFormComponent },
     { path: 'produtos', component: ProdutoListComponent },
     { path: '**', component: NotFoundComponent }

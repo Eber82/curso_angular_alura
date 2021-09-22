@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
+
 import { Photo } from "../photo/photo";
 
 
@@ -11,20 +12,9 @@ export class FilterByDescription implements PipeTransform{
                         .trim()
                         .toLowerCase();
 
-        console.log(descriptionQuery);
-
         if (descriptionQuery){
-            
-            console.log('1');
-            photos = photos.filter(photo => photo.description.toLowerCase().includes(descriptionQuery));
-            
-            console.log(photos);
-            
-            return photos;
-
+            return photos.filter(photo => photo.description.toLowerCase().includes(descriptionQuery));
         }else{
-        
-            console.log('2');
             return photos;
         }
 
