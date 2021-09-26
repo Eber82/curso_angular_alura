@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { PhotosModule } from './photos/photos.module';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
-import { ProdutosModule } from './produtos/produtos.module';
-import {DataViewModule} from 'primeng/dataview';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
@@ -17,9 +16,8 @@ import {DataViewModule} from 'primeng/dataview';
     BrowserModule,
     PhotosModule,
     AppRoutingModule,
-    ProdutosModule,
     ErrorsModule,
-    DataViewModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
